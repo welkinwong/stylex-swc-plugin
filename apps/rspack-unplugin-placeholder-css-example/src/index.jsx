@@ -7,6 +7,7 @@ import { createRoot } from 'react-dom/client'
 import { tokens } from '@stylexswc/design-system/tokens.stylex';
 import { Text } from '@stylexswc/design-system';
 import { breakpoints } from '@stylexswc/design-system/consts.stylex';
+import { vars } from '@/components/vars.stylex';
 
 const styles = stylex.create({
   main: {
@@ -15,7 +16,7 @@ const styles = stylex.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: colors.violet1,
+    backgroundColor: vars.color,
     flexDirection: 'column',
   },
   card: {

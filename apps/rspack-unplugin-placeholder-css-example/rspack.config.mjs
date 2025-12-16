@@ -79,6 +79,13 @@ export default {
       useCssPlaceholder: true,
       rsOptions: {
         dev: isDev,
+        treeshakeCompensation: true,
+        unstable_moduleResolution: {
+          type: 'ESModules',
+        },
+        aliases: {
+          '@/components/': [path.resolve(process.cwd(), 'src/components/')],
+        },
       },
     }),
     new rspack.HtmlRspackPlugin({
