@@ -21,6 +21,9 @@ export default {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      "@/components": path.resolve(dirname, 'src/components'),
+    }
   },
   experiments: {
     css: true,
@@ -84,7 +87,7 @@ export default {
           type: 'ESModules',
         },
         aliases: {
-          '@/components/': [path.resolve(process.cwd(), 'src/components/')],
+          '@/components/*': [path.join(dirname, 'src/components/*')],
         },
       },
     }),
